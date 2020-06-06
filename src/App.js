@@ -1,15 +1,17 @@
 import React from 'react';
+import Cart from './Cart.js';
 import './App.css';
-import Counter from './Counter.js';
-import Mood from './Mood.js';
-import Rating from './Rating.js';
+
+const items = [
+  {id: 1, name: 'Bread', price: 1.99, qty: 1},
+  {id: 2, name: 'Apple', price: 0.5, qty: 5},
+  {id: 3, name: 'Cheese', price: 3.25, qty: 3},
+]
 
 function App() {
   return (
     <>
-    <Counter/>
-    <Mood/>
-    <Rating/>
+    <Cart initialItems={items} />
     </>
   );
 }

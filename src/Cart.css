@@ -1,0 +1,22 @@
+.Cart{
+    width: 60%;
+    margin: 2rem auto;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #f4f4f4;
+}
+
+.Cart-items{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Cart-total{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Cart-total-text{
+    width: 25%;
+}
