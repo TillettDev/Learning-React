@@ -1,6 +1,9 @@
 import React from 'react';
+import Navigation from './Navigation.js';
+import Products from './Products.js';
 import Cart from './Cart.js';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 const items = [
   {id: 1, name: 'Bread', price: 1.99, qty: 1},
@@ -10,9 +13,15 @@ const items = [
 
 function App() {
   return (
-    <>
-    <Cart initialItems={items} />
-    </>
+    <Router>
+      <Navigation />
+      <Switch>
+        <Route path="/products" component={Products}/>
+        {/* <Route path="/Cart" render={(props) => <Cart {...props} initialItems={items}/>} /> */}
+      </Switch>
+      <Cart initialItems={items} />
+    </Router>
+    
   );
 }
 
