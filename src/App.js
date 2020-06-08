@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation.js';
+import Home from './Home.js';
 import Products from './Products.js';
 import Cart from './Cart.js';
 import './App.css';
@@ -16,12 +17,11 @@ function App() {
     <Router>
       <Navigation />
       <Switch>
+        <Route path="/" exact component={Home} />
         <Route path="/products" component={Products}/>
-        {/* <Route path="/Cart" render={(props) => <Cart {...props} initialItems={items}/>} /> */}
+        <Route path="/cart" render={(props) => <Cart {...props} initialItems={items} />}/>
       </Switch>
-      <Cart initialItems={items} />
     </Router>
-    
   );
 }
 
